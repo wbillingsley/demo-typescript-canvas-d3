@@ -1,9 +1,48 @@
 <!DOCTYPE html>
 <html>
 
-    <h1>Asteroid dodge</h1>
-    <canvas id="canvas" width="600" height="600"></canvas>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <style>
+        .line {
+            fill: none;
+        }
+        .line.y {
+            stroke: red;
+        }
+        .line.x {
+            stroke: green;
+        }
+        .line.b {
+            stroke: black;
+        }
+    </style>
     
-    <script src="asteroids.js" />
-    <script>console.log("boo")</script>
+    <div class="container">
+      <div class="row-fluid">
+          <div class="col-md-8">
+              <h2>Asteroid simulation</h2>
+              <canvas id="canvas" width="600" height="600"></canvas>
+              
+              <svg width="600" height="200" id="velocity-graph">
+              
+              </svg>
+          </div>
+          <div class="col-md-4">
+              <h2>Body locations</h2>
+              <p id="locations"></p>                  
+          </div>
+        
+
+        
+      </div>
+        
+        
+    </div>
+    
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="asteroids.js" ></script>
+    
+    
 </html>
